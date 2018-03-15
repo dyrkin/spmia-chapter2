@@ -3,9 +3,6 @@ import com.bmuschko.gradle.docker.tasks.image.DockerBuildImage
 dependencies {
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
-
-    compile('com.h2database:h2')
-    compile('org.postgresql:postgresql:42.2.1.jre7')
 }
 
 task buildImage(type: DockerBuildImage, dependsOn: [replaceTokens, copyJar]) {
